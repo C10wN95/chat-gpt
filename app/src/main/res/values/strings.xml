@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ChatGPT</string>
+    <string name="button_start_speech_recognition">Start Speech Recognition</string>
+</resources>

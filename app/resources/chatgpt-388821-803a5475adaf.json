@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "chatgpt-388821",
+  "private_key_id": "803a5475adaf0f7d7b0b6b7d458886b62897ce97",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC0jQO1XHQKXhe/\n4Q/7gTechEHO9TfDv+JtQ/Zx/zWmvlsriVqw/lZErEQszH0jshn8aKnxbpDKSa5n\n7kYgVApOjGYTBa2cAf0ba2Zj2Ms75vCZ9kxKO9GOSOV34Z6rFVtzEmL35/F2C/py\nWSZ8cXymcpwnEXC110tx5g8P5+AR1d0PVYA6hm11LyfMpsWUbc/4XYFHhE54cIRe\nHZbSxepXtd7xBhknNz/uKFrH6l8koj7rXh4wnym+Kf6/Y8OhWIsHjzKWLXxeMux1\n9BhGtCmdX/teMoc7csFBzlyVi7ew6psFDxiQVXAh0NAcjc5WgWaIwk3//FuOTlQz\nAcSqYF1xAgMBAAECggEAAfn79xicMNedOhGTOqcsSh1oyMSmk9ESQAzXGiH/huv1\nLKumE3NSU5HA9I5XxZvz1L960ki6Ayvlsc+yAvU2kGvxK17D2vYK3LmrExdeyLDn\nVAEmLkcbvPtzbyG4OmJbSB4EuTbn3dllWEp9bU3y/dG5/8O9LJFu+xAIHM4Glf1h\nB7farFEx8AntQhrOYwgZhFz6h0L4AgCTie4rubPnYFL3HOD1kSaRmNGm1Up7Qga1\nV73Kmi0Sjp2tiojVlCk39YjoapfYP+XfA0anG+LVM/W9DMtkqXichlYP065nbU6+\ndzH8haj/DLHUFGSmHWyG1fbsFlHTxIqLfFhkqgDNYQKBgQD8d11Anwj+FDLq5ps0\nLmh0fnqWU3JMwsVbsYcb/SGBiQvOROjo7kG1TbKveWP/qYnGiCJPYIrX/AnsPmGL\nTFE5K281Bs4y0vHnJoBNaY3I9mOzY6iJfsf0rt1lzyWN+jUYzGg93dM7v+BQpszC\no0KEpLaQ30GTLymF24hKRLPKUQKBgQC3E/aXozVxnWG867s9mjYixsL0JSg8BC9N\nsUNlOY1G2Y8212XjfPPvyES606omS/v+SDNpTrwT9dNjUOdq76ak4zKKXzgXs9gr\nDx67CcYdSUXUCw/+ogIn6u9M0Se/K56vlQURX4SPhyjj08kG22elby7BkZsx3Ezf\nVIHLE6N5IQKBgCUIKTCKY1pJgjJ8gvWDfSThTH/yW4iw5RwPDT9owNpsTMQDzZol\nIJREglpE1wswRhpN66JzCcqmmJoDiHFTT3KwUU6Y4fQIhx0dw6IXQongwj0U+Cq6\n4v+cCrOdT+fkdJdfnEa+2/YerfuGi/Bc3CvysSjM5qR9PXz596LVMv4RAoGBALRc\n2YJ4iu1chG6vum6tH4pRUL1gYewGn2emLGRsN4/GRD5eJIXikxv2rCd24dkK4L6Z\n+PRVWhs8Ar6EdQi4Au/M2PzTZBqN1nhNVBQmQ+SUTFPjdiWBDCixXoHKSKMg4RvP\n7wc3mAwitxkEi7bSrqCgEWsn/MI5bA5VXe1ocpOhAoGAYwfwhBIvVQfPA1AgnUAl\nA1KfGj3TttSgX74WtpstbhRP0WiDMY2GHNxcnBss/I7jdZjRw+KpAJs3erdess8t\najpaaAe49cA65jGbi+GBY+w0bldajSabxisN5oo+GMe+YHvGBWoOWdzK7Pja9aSL\nJHU/CzuNSjrPn81nu/siG6Q=\n-----END PRIVATE KEY-----\n",
+  "client_email": "chatgpt-service@chatgpt-388821.iam.gserviceaccount.com",
+  "client_id": "114087840123097378813",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chatgpt-service%40chatgpt-388821.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
