@@ -5,9 +5,11 @@ import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
@@ -20,7 +22,7 @@ import com.msy_studios.chatgpt.SpeechBubble;
 public class MainActivity extends AppCompatActivity {
     private static final int RECORD_AUDIO_PERMISSION_REQUEST_CODE = 1;
     private SpeechRecognitionManager speechRecognitionManager;
-    public SpeechBubble speechBubble;
+    private SpeechBubble speechBubble;
     private LinearLayout speechLayout;
 
     @Override
@@ -29,7 +31,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         speechRecognitionManager = new SpeechRecognitionManager();
-        speechBubble = new SpeechBubble(getApplicationContext());
+        TextView speechBubbleTextView = findViewById(R.id.speech_bubble);
+        String recognizedText = "Dies ist der erkannte Text.";
+        speechBubbleTextView.setText(recognizedText);
 
         Button startButton = findViewById(R.id.startButton);
         startButton.setOnClickListener(new View.OnClickListener() {
@@ -39,9 +43,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        RelativeLayout mainLayout = findViewById(R.id.mainLayout); // Ändere "mainLayout" entsprechend dem Namen deines Root-Layouts
-        speechLayout = speechBubble.getSpeechLayout();
-        mainLayout.addView(speechBubble.getSpeechLayout());
+        RelativeLayout mainLayout = findViewById(R.id.mainLayout);
+        LinearLayout speechLayout = findViewById(R.id.speech_layout);
+        speechBubble = new SpeechBubble(this); // Beispiel für die Initialisierung
+        ViewGroup speechBubbleParent = (ViewGroup) speechBubble.getParent();
+        if (speechBubbleParent != null) {
+            speechBubbleParent.removeView(speechBubble);
+        }
+        speechLayout.addView(speechBubble);
     }
 
     public void showSpeechBubble(String text) {
@@ -52,8 +61,6 @@ public class MainActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
                 != PackageManager.PERMISSION_GRANTED) {
             if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
-                // Zeigen Sie eine Erklärung an, warum die Aufnahmeberechtigung erforderlich ist
-                // Optional: Hier kannst du eine Dialogbox anzeigen, um dem Benutzer den Zweck der Berechtigung zu erklären
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Berechtigung erforderlich");
                 builder.setMessage("Die App benötigt die Aufnahmeberechtigung, um Spracheingaben zu erkennen.");
@@ -78,20 +85,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults); // Basisklassenimplementierung aufrufen
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if (requestCode == RECORD_AUDIO_PERMISSION_REQUEST_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 startSpeechRecognition();
             } else {
-                // Die Berechtigung wurde abgelehnt. Hier kannst du entsprechend reagieren
                 Toast.makeText(this, "Aufnahmeberechtigung wurde abgelehnt", Toast.LENGTH_SHORT).show();
             }
-
         }
-
     }
-
 
     private void startSpeechRecognition() {
         speechRecognitionManager.startSpeechRecognition();

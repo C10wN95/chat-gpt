@@ -14,6 +14,7 @@ public class SpeechBubble extends View {
     private Context context;
     private LinearLayout speechLayout;
     private TextView speechText;
+    private String recognizedText;
 
     public SpeechBubble(Context context) {
         super(context);
@@ -31,6 +32,16 @@ public class SpeechBubble extends View {
         super(context, attrs, defStyleAttr);
         this.context = context;
         initializeViews();
+    }
+
+    private void init() {
+        // Initialisierungscode hier
+        recognizedText = "";
+    }
+
+    public void setRecognizedText(String text) {
+        recognizedText = text;
+        invalidate(); // Benachrichtigt die View, dass sie neu gezeichnet werden muss
     }
 
     private void initializeViews() {

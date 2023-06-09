@@ -27,21 +27,23 @@
         tools:layout_editor_absoluteX="-131dp"
         tools:layout_editor_absoluteY="65dp">
 
-        <EditText
-            android:id="@+id/textBox"
-            android:layout_width="match_parent"
+
+        <LinearLayout
+            android:id="@+id/speech_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/speech_bubble"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/speech_bubble"
             android:gravity="top"
             android:hint="Hier erscheint der erkannte Text"
-            android:inputType="textMultiLine"
             android:padding="8dp"
             android:textSize="16sp" />
-
-        <com.msy_studios.chatgpt.SpeechBubble
-            android:id="@+id/speechBubble"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
 
     </RelativeLayout>
 
